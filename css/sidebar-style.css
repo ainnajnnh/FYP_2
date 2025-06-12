@@ -1,0 +1,213 @@
+/* Sidebar Styles - using your original header colors */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    padding: 2rem 0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+}
+
+.sidebar .logo {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar .logo span {
+    color: #EED9C4;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin: 0;
+}
+
+.sidebar-nav a {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+
+.sidebar-nav a.active {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    color: #666;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+
+.dropbtn.active {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    background: #fff;
+    margin: 0;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: #666;
+    margin: 0;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+
+.dropdown-content a.active {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 0 1rem;
+}
+
+/* Keep dropdown open with better hover area */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add invisible bridge to prevent dropdown from closing */
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: transparent;
+    z-index: 1000;
+}
+
+.dropdown:hover::before {
+    display: block;
+}
+
+/* Logout button */
+.logout-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 1rem;
+}
+
+.logout-btn a {
+    font-size: 2rem;
+    color: #666;
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.logout-btn a:hover {
+    color: #EED9C4;
+    background-color: #666;
+    border-radius: 20px;
+}
+
+/* Main content adjustment */
+.main-content {
+    margin-left: 250px;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.home.admin {
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Hide original header if it exists */
+header {
+    display: none;
+}
